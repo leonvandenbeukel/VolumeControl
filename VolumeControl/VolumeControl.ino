@@ -1,4 +1,3 @@
-// Analog potentiometer / Volume part
 int const potPin = A0;
 int potVal;
 int vol;
@@ -15,7 +14,7 @@ void loop() {
 
 void volume() {
   potVal = analogRead(potPin);
-  vol = map(potVal, 0, 1023, 0, 80); // 80 is max but way too loud so use 40
+  vol = map(potVal, 0, 1023, 0, 80); // 80 is max 
   float lastvalue = volf;
   volf = float(vol) / 10;
 
